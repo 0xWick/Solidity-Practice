@@ -1,4 +1,6 @@
 // SPDX-License-Identifier: MIT
+// FundMe.sol , A Project to fund a smart contract and
+// those funds can only be withdrawn by the owner(who created/deployed the contract)
 
 pragma solidity >= 0.6.6 < 0.9.0;
 
@@ -6,7 +8,7 @@ import "@chainlink/contracts/src/v0.6/interfaces/AggregatorV3Interface.sol";
 import "@chainlink/contracts/src/v0.6/vendor/SafeMathChainlink.sol";
 
 contract FundMe {
-    // Adding to Git Repo!
+    // Added to Github Repository(Solidity-Practice)
     // Stop Overflow!
     using SafeMathChainlink for uint256;
 
