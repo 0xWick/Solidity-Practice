@@ -87,6 +87,7 @@ simple_storage = w3.eth.contract(address=tx_receipt.contractAddress, abi=abi)
 # Call -> Simulating making the call and getting a return value
 # Transact -> Actually make a state change
 
+# Initial value of favouriteNumber
 print(simple_storage.functions.retrieve().call())
 
 # THis is just a call and doesnt make a state change
