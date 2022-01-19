@@ -5,7 +5,10 @@ import json
 from web3 import Web3
 
 # Using code in the .sol file
-with open("./SimpleStorage.sol", "r") as file:
+with open(
+    "c:/Users/merry/OneDrive/Documents/GitHub/Solidity-Practice/Python-Projects/SimpleStorage/SimpleStorage.sol",
+    "r",
+) as file:
     simple_storage_file = file.read()
 #   print(simple_storage_file)
 
@@ -42,11 +45,11 @@ bytecode = compiled_sol["contracts"]["SimpleStorage.sol"]["SimpleStorage"]["evm"
 abi = compiled_sol["contracts"]["SimpleStorage.sol"]["SimpleStorage"]["abi"]
 
 # 3. Web3 for Connecting with Ganesh
-w3 = Web3(Web3.HTTPProvider("http://127.0.0.1:7545"))
+w3 = Web3(Web3.HTTPProvider("127.0.0.1:8545"))
 chain_id = 1337
-my_address = "0x444E7B3f4Dac461Af8544B0023CDCaFC53e9aF72"
+my_address = "0xFFcf8FDEE72ac11b5c542428B35EEF5769C409f0"
 # Make this as an env variable, NEVER HARDCODE YOUR KEY!
-private_key = "ae07f616dc9c29a7c10e53ca3c9dc442d859e24db48f94787b482cb38a57aa80"
+private_key = "0x6cbed15c793ce57650b9877cf6fa156fbef513c4e6134f022a85b1ffdd59b2a1"
 
 # 4. Creating the Contract
 SimpleStorage = w3.eth.contract(abi=abi, bytecode=bytecode)
