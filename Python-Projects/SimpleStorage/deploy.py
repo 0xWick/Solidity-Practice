@@ -44,12 +44,12 @@ bytecode = compiled_sol["contracts"]["SimpleStorage.sol"]["SimpleStorage"]["evm"
 # 2. Get ABI
 abi = compiled_sol["contracts"]["SimpleStorage.sol"]["SimpleStorage"]["abi"]
 
-# 3. Web3 for Connecting with Ganesh
-w3 = Web3(Web3.HTTPProvider("127.0.0.1:8545"))
-chain_id = 1337
-my_address = "0xFFcf8FDEE72ac11b5c542428B35EEF5769C409f0"
+# 3. Web3 for Connecting with Rinkeby
+w3 = Web3(Web3.HTTPProvider("#HTTP of Chain"))
+chain_id = 4
+my_address = "#Your Address"
 # Make this as an env variable, NEVER HARDCODE YOUR KEY!
-private_key = "0x6cbed15c793ce57650b9877cf6fa156fbef513c4e6134f022a85b1ffdd59b2a1"
+private_key = "#Your Private Key"
 
 # 4. Creating the Contract
 SimpleStorage = w3.eth.contract(abi=abi, bytecode=bytecode)
